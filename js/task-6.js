@@ -15,20 +15,21 @@ destroyButton.addEventListener('click', destroyBoxes);
 function onButtonClick() {
   const amount = inputCreate.value;
   if (amount >= 1 && amount <= 100) {
-    createBoxes(amount)
-  }
+    createBoxes(amount);
+  };
 }
 
 function createBoxes(amount) {
+  
   containerCreate.innerHTML = '';
-    for (let i = 0; i < amount; i += 1) {
-    const createDiv = document.createElement('div');
-    createDiv.style.backgroundColor = getRandomHexColor();
-    createDiv.style.width = `${30 + i * 10}px`;
-    createDiv.style.height = `${30 + i * 10}px`;
-    containerCreate.appendChild(createDiv);
-    };
-    inputCreate.value = '';
+  for (let i = 0; i < amount; i += 1) {
+  const createDiv = document.createElement('div');
+  createDiv.style.backgroundColor = getRandomHexColor();
+  createDiv.style.width = `${30 + i * 10}px`;
+  createDiv.style.height = `${30 + i * 10}px`
+  containerCreate.appendChild(createDiv);
+  };
+  inputCreate.value = '';
 };
 
 function destroyBoxes() {
